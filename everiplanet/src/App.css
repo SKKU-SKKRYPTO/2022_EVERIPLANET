@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'Archivo', sans-serif;
+  src: url('./styles/assets/fonts/Archivo-Light.ttf') format('opentype');
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: 'Archivo', sans-serif;
+  src: url('./styles/assets/fonts/Archivo-Medium.ttf') format('opentype');
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: 'Archivo', sans-serif;
+  src: url('./styles/assets/fonts/Archivo-Regular.ttf') format('opentype');
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: 'Archivo', sans-serif;
+  src: url('./styles/assets/fonts/Archivo-LightItalic.ttf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Archivo', sans-serif;
+  src: url('./styles/assets/fonts/Archivo-MediumItalic.ttf') format('opentype');
+}
+
+* {
+  font-family: 'Archivo-Medium.ttf';
+  color: var(--font-color);
+}
+
+.menu_bar {
   display: flex;
-  flex-direction: column;
+}
+
+.menu_button {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+  width: 150px;
+  height: 30px;
+
+  background-color: var(--frame-background-dim);
+  color: var(--font-color);
+
+  font-weight: bold;
+  font-size: 13pt;
+
+  border-radius: 5px;
+}
+
+.menu_button:hover {
+  opacity: 0.5;
+}
+
+.menu_button__selected {
+  background-color: var(--frame-background);
+}
+
+.page_content {
+  width: 100%;
+  height: 100vh;
+
+  background-color: var(--frame-background);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+:root {
+  --frame-background: #ffc0d3;
+  --border-color: #524a4e;
+  --frame-background-dim: #fdeff4;
+  --deep-pink: #ff5c8d;
+  --font-color: #0f1021;
+  --light-pink: #ffcee4;
+  --normal-pink: #fb90b7;
+  --highlight-color: #d01257;
 }

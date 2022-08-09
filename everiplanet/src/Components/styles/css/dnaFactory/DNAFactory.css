@@ -1,0 +1,137 @@
+.dna_factory_frame {
+    height: 100%;
+  }
+  
+  .dna_factory_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    width: 100%;
+  }
+  
+  .dna_factory_title {
+    /*width: 40%; */
+  
+    font-weight: bold;
+    font-size: 30pt;
+  
+    margin-top: 10px;
+  
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  
+  .dna_factory_title_text {
+    min-width: 280px;
+    min-height: 50px;
+  
+    background-color: var(--normal-pink);
+  
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+  
+    margin-right: 5px;
+    margin-left: 20px;
+  
+    padding-left: 5px;
+  
+    text-align: center;
+  
+    display: flex;
+    justify-content: left;
+  }
+  
+  .dna_factory_title_help_box {
+    min-width: 30px;
+  
+    margin-top: 5px;
+    margin-left: 10px;
+  
+    opacity: 0.8;
+  }
+  
+  .dna_factory_title_help {
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+  
+    background-color: var(--normal-pink);
+  
+    font-size: 20pt;
+  }
+  
+  .dna_facotry_help_text {
+    border-radius: 50%;
+  }
+  
+  .energy_box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  
+    margin-right: 20px;
+  
+    width: 150px;
+    height: 30px;
+  
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+  
+    background-color: var(--normal-pink);
+  }
+  
+  .energy {
+    background: url('../../assets/svg/Energy.svg') no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+  }
+  
+  .dna_factory_body {
+    height: calc(100% - 112px);
+  
+    padding: 20px;
+  
+    border-radius: 5px;
+  }
+  
+  .dna_factory_help {
+    min-width: 50px;
+    min-height: 50px;
+  
+    background-color: var(--normal-pink);
+  
+    text-align: center;
+  }
+  
+  .dna_factory_tabs {
+    display: flex;
+    justify-content: right;
+  }
+  
+  .dna_factory_tab {
+    width: 150px;
+    height: 30px;
+    background-color: var(--frame-background-dim);
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    border-radius: 5px;
+  }
+  
+  .dna_factory_tab:hover {
+    opacity: 0.5;
+  }
+  
+  .dna_factory_tab__selected {
+    background-color: var(--normal-pink);
+  }
+  
+  .dna_factory_content {
+    background-color: var(--normal-pink);
+    width: 100%;
+    height: 100%;
+  }
