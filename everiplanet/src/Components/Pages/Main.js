@@ -10,6 +10,7 @@ function Main() {
             <a href="http://localhost:3000/DnaFactory">DnaFactory</a><br></br>
             <a href="http://localhost:3000/Mine">Mine</a><br></br>
             <a href="http://localhost:3000/Testpage">Testpage</a><br></br>
+            <a href="http://localhost:3000/Testpage2">Testpage2</a><br></br>
         </div>
     )
 }

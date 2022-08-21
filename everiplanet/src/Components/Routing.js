@@ -6,6 +6,7 @@ import Barrack from "./Pages/Barrack";
 import Main from "./Pages/Main";
 import Testpage from "./Pages/Testpage";
 import DnaFactory from "./Pages/DnaFactory";
+import Testpage2 from "./Pages/Testpage2";
 
 
 function Routing() {
@@ -20,6 +21,7 @@ function Routing() {
                 <Route path='/dnafactory' element={<DnaFactory/>}></Route>
                 <Route path='/factory' element={<Factory/>}></Route>
                 <Route path='/testpage' element={<Testpage/>}></Route>
+                <Route path='/testpage2' element={<Testpage2 />}></Route>
             </Routes>
         </BrowserRouter>
     );
