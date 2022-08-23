@@ -1,34 +1,68 @@
 import React, { useState } from 'react';
-import CompositionContent from './CompositionContent';
-import CopyContent from './CopyContent';
+import DNACopy from './DNACopy';
+import DNAComposition from './DNAComposition';
+import strings from '../../../common/strings';
 import '../../../styles/css/dnaFactory/DNAFactory.css';
 
-function DnaFactory() {
+const DnaFactory = () => {
   const COPY = 0;
   const COMPOSITION = 1;
+
   const [currentTab, setCurrentTab] = useState(COPY);
 
-  const handleClickCopyTab = () => {
+  const handleClickCopy = () => {
     setCurrentTab(COPY);
   };
 
-  const handleClickCompositoinTab = () => {
+  const handleClickComposition = () => {
     setCurrentTab(COMPOSITION);
   };
 
+  const getCurrentContent = () => {
+    switch (currentTab) {
+      default:
+      case COPY:
+        return <DNACopy />;
+      case COMPOSITION:
+        return <DNAComposition />;
+    }
+  };
   return (
-    <div>
-      <div className='page_title'>DNA Factory</div>
-      <div>?</div>
-      <div>Energy: 100</div>
-      <div>X</div>
-      <div>
-        <div onClick={handleClickCopyTab}>Copy</div>
-        <div onClick={handleClickCompositoinTab}>Composition</div>
-        <div>{currentTab === COPY ? <CopyContent /> : <CompositionContent />}</div>
+    <div className='dna_factory_frame'>
+      <div className='dna_factory_header'>
+        <div className='dna_factory_title'>
+          <div className='dna_factory_title_text'>
+            {strings.dnaFactory}
+            <div className='dna_factory_title_help_box'>
+              <div className='dna_factory_title_help'>{strings.questionMark}</div>
+            </div>
+          </div>
+        </div>
+
+        <div className='energy_box'>
+          <div className='energy'></div>
+          {strings.energy}: 1000
+        </div>
+      </div>
+      <div className='dna_factory_body'>
+        <div className='dna_factory_tabs'>
+          <div
+            className={`dna_factory_tab ${currentTab === COPY ? 'dna_factory_tab__selected' : strings.empty}`}
+            onClick={handleClickCopy}
+          >
+            {strings.copy}
+          </div>
+          <div
+            className={`dna_factory_tab ${currentTab === COMPOSITION ? 'dna_factory_tab__selected' : strings.empty}`}
+            onClick={handleClickComposition}
+          >
+            {strings.composition}
+          </div>
+        </div>
+        <div className='dna_factory_content'>{getCurrentContent()}</div>
       </div>
     </div>
   );
-}
+};
 
 export default DnaFactory;

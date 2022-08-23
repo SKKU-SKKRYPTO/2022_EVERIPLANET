@@ -1,0 +1,10 @@
+.dna_list_row {
+  display: flex;
+  justify-content: space-between;
+}
+.dna_file {
+  background: url('../../../styles/assets/png/brainies2.png') no-repeat;
+  width: 90px;
+  height: 90px;
+  background-size: contain;
+}
