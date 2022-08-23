@@ -1,51 +1,6 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getFirestore } from "firebase/firestore";
+
 import React, { useState } from 'react';
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import 'firebase/compat/firestore';
-import { addDoc, collection, getDocs } from "firebase/firestore";
-import { enableIndexedDbPersistence } from "firebase/firestore";
-
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
-const firebaseConfig = {
-  apiKey: "AIzaSyD527UBKQkPkeLdhKnLU6aLJiLZDRnoO04",
-  authDomain: "everipedia-back.firebaseapp.com",
-  projectId: "everipedia-back",
-  storageBucket: "everipedia-back.appspot.com",
-  messagingSenderId: "86000100182",
-  appId: "1:86000100182:web:14c04c885cdae77c7decf7",
-  measurementId: "G-JBPS022EVX"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-firebase.initializeApp(firebaseConfig); //firebase 초기화
-
-const db = firebase.firestore(); //store 사용
-
-
-enableIndexedDbPersistence(db)
-  .catch((err) => {
-      if (err.code == 'failed-precondition') {
-          // Multiple tabs open, persistence can only be enabled
-          // in one tab at a a time.
-          // ...
-      } else if (err.code == 'unimplemented') {
-          // The current browser does not support all of the
-          // features required to enable persistence
-          // ...
-      }
-  });
+import { db } from "../Firebase"
 
 function Testpage2() {
   const [id, setId] = useState();

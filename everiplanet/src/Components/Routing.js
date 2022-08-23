@@ -4,9 +4,10 @@ import Factory from "./Pages/Factory";
 import Mine from "./Pages/Mine";
 import Barrack from "./Pages/Barrack";
 import Main from "./Pages/Main";
-import Testpage from "./Pages/Testpage";
+import Testpage from "./Pages/Testpage"; // web3 Example
 import DnaFactory from "./Pages/DnaFactory";
-import Testpage2 from "./Pages/Testpage2";
+import DnaFactoryFts from "./Pages/DnaFactoryFts";
+import Testpage2 from "./Pages/Testpage2"; // Firebase store Example
 
 
 function Routing() {
@@ -19,6 +20,7 @@ function Routing() {
                 <Route path='/mine' element={<Mine/>}></Route>
                 <Route path='/barrack' element={<Barrack/>}></Route>
                 <Route path='/dnafactory' element={<DnaFactory/>}></Route>
+                <Route path='/dnafactoryfts' element={<DnaFactoryFts/>}></Route>
                 <Route path='/factory' element={<Factory/>}></Route>
                 <Route path='/testpage' element={<Testpage/>}></Route>
                 <Route path='/testpage2' element={<Testpage2 />}></Route>

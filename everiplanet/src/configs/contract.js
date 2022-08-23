@@ -1,4 +1,6 @@
-export const CONTACT_ADDRESS = '0xD3C28Bb1A227e1c994583540B6FC572170207622'
+export const START_BNUM = 7445869
+
+export const CONTACT_ADDRESS = '0x68106f17e9c30ae9E64cE2f6397E6024E2A3cBEb'
 
 export const CONTACT_ABI = [
   {
@@ -62,6 +64,31 @@ export const CONTACT_ABI = [
       {
         "indexed": true,
         "internalType": "address",
+        "name": "to",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "id",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "dna",
+        "type": "uint256"
+      }
+    ],
+    "name": "Mint",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
         "name": "from",
         "type": "address"
       },
@@ -80,25 +107,6 @@ export const CONTACT_ABI = [
     ],
     "name": "Transfer",
     "type": "event"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "abrasionOf",
-    "outputs": [
-      {
-        "internalType": "uint8",
-        "name": "",
-        "type": "uint8"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
   },
   {
     "inputs": [
@@ -141,25 +149,6 @@ export const CONTACT_ABI = [
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "name": "dnaOf",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
         "name": "tokenId",
         "type": "uint256"
       }
@@ -170,6 +159,42 @@ export const CONTACT_ABI = [
         "internalType": "address",
         "name": "",
         "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_owner",
+        "type": "address"
+      }
+    ],
+    "name": "getNFTsByOwner",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "id",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "dna",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint8",
+            "name": "abrasion",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct Brainies.Brainy[]",
+        "name": "",
+        "type": "tuple[]"
       }
     ],
     "stateMutability": "view",
