@@ -1,0 +1,72 @@
+  .dna_factory_instruction_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .dna_factory_instruction_title {
+    font-weight: bold;
+    font-size: 30pt;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dna_factory_instruction_title_text {
+    min-width: 280px;
+    min-height: 50px;
+  
+    background-color: var(--frame-background-dim);
+  
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+  
+    text-align: center;
+  
+    display: flex;
+  }
+  
+  .dna_factory_instruction_box_list {
+    display: flex;
+    gap: 50px;
+    /* justify-content: space-around */
+    margin-top: 80px;
+  }
+  
+  .dna_factory_instruction_box {
+    width: 200px;
+    height: 300px;
+    
+    background-color: var(--frame-background-dim);
+    border: 3px solid var(--deep-pink);
+    border-radius: 5px;
+
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .dna_factory_instruction_box:hover {
+    opacity: 0.5;
+  }
+  
+  .dna_factory_instruction_box_title {
+    font-weight: bold;
+    font-size: 20pt;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .dna_factory_instruction_box_text {
+    font-size: 13pt;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
